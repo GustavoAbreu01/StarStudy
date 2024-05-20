@@ -1,0 +1,13 @@
+.container_banner_news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    right: 2.5vw;
+    top: 4.5vh;
+    border-radius: 15vh 15vh 45vh 15vh;
+}

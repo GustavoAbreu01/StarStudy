@@ -23,8 +23,9 @@ function SideMenu() {
         <div className='user_info'>
           <Avatar className="avatar_image" {...config} />
           <p>{user.name}</p>
+          <p className='pc_number'>{user.pc}</p>
         </div>
-        <p className='pc_number'>{user.pc}</p>
+        <div className='menu_divider'></div>
         <div className="input_wrapper">
           <input type="checkbox" className="switch_4" />
           <TbHazeMoon className='is_checked' />
