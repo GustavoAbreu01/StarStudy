@@ -1,9 +1,12 @@
 import React from 'react'
 import './Home.css'
+import SideMenu from '../../components/sideMenu/SideMenu'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='container_home'>
+      <SideMenu />
+    </div>
   )
 }
 
