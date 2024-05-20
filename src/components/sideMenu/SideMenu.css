@@ -33,11 +33,118 @@
 
 .box_user {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     margin: 1vh;
     width: 8vw;
     height: 43vh;
     border-radius: 10vh;
     background-color: rgb(238, 238, 238);
+}
+
+.input_wrapper {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.input_wrapper:focus {
+    outline: none;
+}
+
+.input_wrapper input[type="checkbox"] {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--white);
+    border-radius: 20px;
+    position: relative;
+    rotate: 90deg;
+    outline: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.input_wrapper input[type="checkbox"]:after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(238, 238, 238);
+    rotate: 90deg;
+    z-index: 2;
+    border-radius: 20px;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
+.input_wrapper svg {
+    position: absolute;
+    top: 70%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    fill: rgb(238, 238, 238);
+    color: rgb(238, 238, 238);
+    -webkit-transition: all .35s;
+    transition: all .35s;
+    z-index: 1;
+}
+
+.input_wrapper .is_checked {
+    width: 18px;
+    left: 35%;
+    -webkit-transform: translateX(0%) translateY(-100%) scale(0);
+    transform: translateX(0%) translateY(-30%) scale(0);
+}
+
+.input_wrapper .is_unchecked {
+    width: 18px;
+    right: 35%;
+    -webkit-transform: translateX(0) translateY(-10%) scale(1.5);
+    transform: translateX(-30%) translateY(50%) scale(1.5);
+}
+
+/* Checked State */
+.input_wrapper input[type="checkbox"]:checked {
+    background-color: var(--white);
+}
+
+.input_wrapper input[type="checkbox"]:checked:after {
+    left: calc(100% - 40px);
+}
+
+.input_wrapper input[type="checkbox"]:checked+.is_checked {
+    -webkit-transform: translateX(0%) translateY(-50%) scale(1.5);
+    transform: translateX(30%) translateY(-290%) scale(1.5);
+}
+
+.input_wrapper input[type="checkbox"]:checked~.is_unchecked {
+    -webkit-transform: translateX(0%) translateY(-50%) scale(0);
+    transform: translateX(-0%) translateY(-50%) scale(0);
+}
+
+.avatar_image {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+}
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+}
+
+.pc_number {
+    font-size: 1.5vh;
+    color: rgb(161, 161, 161);
 }
