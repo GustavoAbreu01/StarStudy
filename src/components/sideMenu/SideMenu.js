@@ -40,10 +40,10 @@ function SideMenu() {
     <div className='container_sidemenu'>
       <div className='box_options'>
         <img src='*' className='logo_menu' />
-        <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option == 1 ? 'active' : ''}`} />
-        <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option == 2 ? 'active' : ''}`} />
-        <RiQuestionFill onClick={alternateOption(3)} className={`icon_menu ${option == 3 ? 'active' : ''}`} />
-        <RiChat3Fill onClick={alternateOption(4)} className={`icon_menu ${option == 4 ? 'active' : ''}`} />
+        <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option === 1 ? 'active' : ''}`} />
+        <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option === 2 ? 'active' : ''}`} />
+        <RiQuestionFill onClick={alternateOption(3)} className={`icon_menu ${option === 3 ? 'active' : ''}`} />
+        <RiChat3Fill onClick={alternateOption(4)} className={`icon_menu ${option === 4 ? 'active' : ''}`} />
       </div>
       <div className='box_user'>
         <div className='user_info'>

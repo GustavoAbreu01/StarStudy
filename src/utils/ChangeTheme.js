@@ -12,7 +12,8 @@ export const changeTheme = (theme) => {
             '--quinary-color': '#D9A64A',
             '--senary-color': '#E16237',
             '--base-color1': '#1F1F1F',
-            '--base-color2': '#1A1A1A'
+            '--base-color2': '#1A1A1A',
+            '--image-detail': '../../assets/img/Ativo 4.png'
         }
     } else {
         myVariables = {
@@ -23,7 +24,8 @@ export const changeTheme = (theme) => {
             '--quinary-color': '#2F4B79',
             '--senary-color': '#223150',
             '--base-color1': '#eeeeee',
-            '--base-color2': '#ffffff'
+            '--base-color2': '#ffffff',
+            '--image-detail': '../../assets/img/Ativo 3.png'
         }
     }
 
