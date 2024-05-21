@@ -12,6 +12,11 @@ function SideMenu() {
   const config = genConfig()
 
   const user = JSON.parse(window.localStorage.getItem('user'))
+  const [option, setOption] = React.useState(1)
+
+  const alternateOption = (option) => () => {
+    setOption(option)
+  }
 
   const changeLocalTheme = () => {
     const currentTheme = localStorage.getItem('theme');
@@ -33,10 +38,11 @@ function SideMenu() {
   return (
     <div className='container_sidemenu'>
       <div className='box_options'>
-        <RiHome3Fill className='icon_menu' />
-        <RiBook2Fill className='icon_menu' />
-        <RiQuestionFill className='icon_menu' />
-        <RiChat3Fill className='icon_menu' />
+        <img src='https://i.imgur.com/7bIq1vz.png' className='logo_menu' />
+        <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option == 1 ? 'active' : ''}`} />
+        <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option == 2 ? 'active' : ''}`} />
+        <RiQuestionFill onClick={alternateOption(3)} className={`icon_menu ${option == 3 ? 'active' : ''}`} />
+        <RiChat3Fill onClick={alternateOption(4)} className={`icon_menu ${option == 4 ? 'active' : ''}`} />
       </div>
       <div className='box_user'>
         <div className='user_info'>

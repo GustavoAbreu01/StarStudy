@@ -3,11 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 500px;
+    width: 17.5vw;
+    height: 53vh;
     background-color: rgb(255, 255, 255);
     position: fixed;
-    right: 2.5vw;
+    right: 2.6vw;
     top: 4.5vh;
-    border-radius: 15vh 15vh 45vh 15vh;
+    border-radius: 10vh 10vh 45% 10vh;
 }
