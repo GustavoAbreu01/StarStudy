@@ -13,7 +13,8 @@ export const changeTheme = (theme) => {
             '--senary-color': '#E16237',
             '--base-color1': '#1F1F1F',
             '--base-color2': '#1A1A1A',
-            '--image-detail': '../../assets/img/Ativo 4.png'
+            '--white': '#000',
+            '--black': '#fff'
         }
     } else {
         myVariables = {
@@ -25,7 +26,8 @@ export const changeTheme = (theme) => {
             '--senary-color': '#223150',
             '--base-color1': '#eeeeee',
             '--base-color2': '#ffffff',
-            '--image-detail': '../../assets/img/Ativo 3.png'
+            '--white': '#fff',
+            '--black': '#000'
         }
     }
 

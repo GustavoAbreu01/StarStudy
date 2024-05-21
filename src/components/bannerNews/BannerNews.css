@@ -5,7 +5,7 @@
     align-items: center;
     width: 17.5vw;
     height: 53vh;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--base-color2);
     position: fixed;
     right: 2.6vw;
     top: 4.5vh;
