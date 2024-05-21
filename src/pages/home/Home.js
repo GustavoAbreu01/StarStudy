@@ -7,7 +7,7 @@ import BannerNews from '../../components/bannerNews/BannerNews'
 
 function Home() {
 
-  window.localStorage.setItem('user', JSON.stringify({ name: 'John Doe', pc: '34' }))
+  window.localStorage.setItem('user1', JSON.stringify({ name: 'John Doe', pc: '34' }))
 
   return (
     <div className='container_home'>

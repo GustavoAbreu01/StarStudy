@@ -6,12 +6,13 @@ import Avatar, { genConfig } from 'react-nice-avatar'
 import { TbHazeMoon, TbSunset2 } from "react-icons/tb";
 import { changeTheme } from '../../utils/ChangeTheme'
 import { useEffect } from 'react';
+import { getUser } from '../../utils/ChangeUser';
 
 function SideMenu() {
   const ref = React.useRef(null)
-  const config = genConfig()
+  const config = getUser()
 
-  const user = JSON.parse(window.localStorage.getItem('user'))
+  const user = JSON.parse(window.localStorage.getItem('user1'))
   const [option, setOption] = React.useState(1)
 
   const alternateOption = (option) => () => {
