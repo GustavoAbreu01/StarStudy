@@ -4,6 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   cursor: default;
+  background-color: var(--base-color2);
 }
 
 body::-webkit-scrollbar {
@@ -34,6 +35,8 @@ body::-webkit-scrollbar-thumb {
   --quaternary-color: #C92337;
   --quinary-color: #D9A64A;
   --senary-color: #E16237;
+  --base-color1: #eeeeee;
+  --base-color2: #ffffff;
 
   --white: #fff;
   --black: #000;

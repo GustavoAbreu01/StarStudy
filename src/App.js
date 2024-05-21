@@ -6,7 +6,8 @@ import NotFound from "./pages/notFound/NotFound";
 import { useEffect } from "react";
 import { changeTheme } from "./utils/ChangeTheme";
 
-
+// https://home.openweathermap.org/api_keys
+// https://api.openweathermap.org/data/2.5/weather?q=macei%C3%B3&units=metric&appid=fac10a74a804d851c82efe78bb6fa468&lang=pt_br
 
 function App() {
 

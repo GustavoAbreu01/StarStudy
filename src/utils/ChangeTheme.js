@@ -10,7 +10,9 @@ export const changeTheme = (theme) => {
             '--tertiary-color': '#4A668E',
             '--quaternary-color': '#C92337',
             '--quinary-color': '#D9A64A',
-            '--senary-color': '#E16237'
+            '--senary-color': '#E16237',
+            '--base-color1': '#1F1F1F',
+            '--base-color2': '#1A1A1A'
         }
     } else {
         myVariables = {
@@ -19,7 +21,9 @@ export const changeTheme = (theme) => {
             '--tertiary-color': '#C92337',
             '--quaternary-color': '#4A668E',
             '--quinary-color': '#2F4B79',
-            '--senary-color': '#223150'
+            '--senary-color': '#223150',
+            '--base-color1': '#eeeeee',
+            '--base-color2': '#ffffff'
         }
     }
 
