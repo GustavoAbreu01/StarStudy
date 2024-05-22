@@ -22,7 +22,9 @@ function SideMenu() {
   }
 
   const reloadPage = () => {
+    setTimeout(() => {
     window.location.reload()
+    } , 200)
   }
 
   const changeLocalTheme = () => {
@@ -34,8 +36,9 @@ function SideMenu() {
       localStorage.setItem('theme', 'light');
       ref.current.checked = true;
     }
-
+    setInterval(() => {
     changeTheme(currentTheme)
+    } , 1000)
   }
 
   useEffect(() => {
