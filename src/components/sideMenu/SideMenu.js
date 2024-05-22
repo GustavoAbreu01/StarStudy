@@ -12,11 +12,17 @@ function SideMenu() {
   const ref = React.useRef(null)
   const config = getUser()
 
+  window.localStorage.setItem('user1', JSON.stringify({ name: 'John Doe', pc: '1' }))
+
   const user = JSON.parse(window.localStorage.getItem('user1'))
   const [option, setOption] = React.useState(1)
 
   const alternateOption = (option) => () => {
     setOption(option)
+  }
+
+  const reloadPage = () => {
+    window.location.reload()
   }
 
   const changeLocalTheme = () => {
@@ -52,8 +58,8 @@ function SideMenu() {
           <p className='pc_number'>{user.pc}</p>
         </div>
         <div className='menu_divider'></div>
-        <div className="input_wrapper">
-          <input type="checkbox" className="switch_4" onClick={() => { changeLocalTheme() }} ref={ref} />
+        <div onClick={() => { changeLocalTheme() }} className="input_wrapper">
+          <input onClick={reloadPage} type="checkbox" className="switch_4" ref={ref} />
           <TbHazeMoon className='is_checked' />
           <TbSunset2 className='is_unchecked' />
         </div>
