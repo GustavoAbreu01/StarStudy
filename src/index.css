@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+@font-face {
+  font-family: quicksand;
+  src: url(./assets/font/Quicksand-Regular.ttf);
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -5,6 +12,7 @@ body {
   overflow-x: hidden;
   cursor: default;
   background-color: var(--base-color2);
+  font-family: quicksand;
 }
 
 body::-webkit-scrollbar {
@@ -24,6 +32,7 @@ body::-webkit-scrollbar-thumb {
 * {
   font-family: Legend;
   scroll-behavior: smooth;
+  font-family: quicksand;
   margin: 0;
   padding: 0;
 }

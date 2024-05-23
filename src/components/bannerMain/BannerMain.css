@@ -1,0 +1,18 @@
+.banner_main_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+    height: 80vh;
+    margin-right: 21vw;
+    margin-left: 13.5vw;
+    margin-top: 2.5vh;
+}
+
+.container_banner_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 95vh;
+}

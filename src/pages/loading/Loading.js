@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import './Loading.css'
 
+import banner from '../../assets/img/Sem título-2.png'
+
 function Loading() {
 
     const themeColor = () => {
@@ -8,14 +10,17 @@ function Loading() {
         if (currentTheme === 'dark') {
             return true
         } else {
-            return false 
+            return false
         }
     }
 
     return (
-        <div className={`container_loading ${themeColor() ? 'light' : 'dark'}`}>
-            <span class="loader"></span>
-        </div>
+        <>
+            <div className={`container_loading ${themeColor() ? 'light' : 'dark'}`}>
+                <span class={`loader ${themeColor() ? 'light' : 'dark'}`}></span>
+            </div>
+            <img src={banner} className='image_loading' />
+        </>
     )
 }
 

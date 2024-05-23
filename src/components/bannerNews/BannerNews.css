@@ -1,8 +1,6 @@
 .container_banner_news {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 17.5vw;
     height: 53vh;
     background-color: var(--base-color2);
@@ -10,4 +8,18 @@
     right: 2.6vw;
     top: 4.5vh;
     border-radius: 10vh 10vh 45% 10vh;
+}
+
+.box_temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    width: 8vw;
+    height: 10vh;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--quaternary-color);
+    color: #fff;
+    border-radius: 0 10vh 0 5vh;
 }

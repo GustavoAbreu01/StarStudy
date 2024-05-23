@@ -8,6 +8,9 @@ import { changeTheme } from '../../utils/ChangeTheme'
 import { useEffect } from 'react';
 import { getUser } from '../../utils/ChangeUser';
 
+import logoDark from '../../assets/img/LogoDark.png'
+import logoLight from '../../assets/img/LogoLight.png'
+
 function SideMenu() {
   const ref = React.useRef(null)
   const config = getUser()
@@ -16,6 +19,9 @@ function SideMenu() {
 
   const user = JSON.parse(window.localStorage.getItem('user1'))
   const [option, setOption] = React.useState(1)
+
+  const verifyTheme = localStorage.getItem('theme')
+  const imageTheme = verifyTheme === 'dark' ? logoLight : logoDark
 
   const alternateOption = (option) => () => {
     setOption(option)
@@ -48,7 +54,7 @@ function SideMenu() {
   return (
     <div className='container_sidemenu'>
       <div className='box_options'>
-        <img src='*' className='logo_menu' />
+        <img src={imageTheme} className='logo_menu' />
         <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option === 1 ? 'active' : ''}`} />
         <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option === 2 ? 'active' : ''}`} />
         <RiQuestionFill onClick={alternateOption(3)} className={`icon_menu ${option === 3 ? 'active' : ''}`} />
@@ -63,8 +69,8 @@ function SideMenu() {
         <div className='menu_divider'></div>
         <div onClick={() => { changeLocalTheme() }} className="input_wrapper">
           <input onClick={reloadPage} type="checkbox" className="switch_4" ref={ref} />
-          <TbHazeMoon className='is_checked' />
-          <TbSunset2 className='is_unchecked' />
+          <TbHazeMoon onClick={() => { changeLocalTheme() }} className='is_checked' />
+          <TbSunset2 onClick={() => { changeLocalTheme() }} className='is_unchecked' />
         </div>
       </div>
     </div>
