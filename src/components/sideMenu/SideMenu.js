@@ -13,6 +13,7 @@ import logoLight from '../../assets/img/LogoLight.png'
 
 import Swal from 'sweetalert2'
 import BannerMain from '../bannerMain/BannerMain';
+import BannerContent from '../bannerContent/BannerContent';
 
 function SideMenu() {
   const ref = React.useRef(null)
@@ -26,11 +27,21 @@ function SideMenu() {
   const verifyTheme = localStorage.getItem('theme')
   const imageTheme = verifyTheme === 'dark' ? logoLight : logoDark
 
+  const [verifyBanner, setVerifyBanner] = React.useState(1)
+
   const alternateOption = (option) => () => {
     setOption(option)
     if (option === 1) {
-      window.location.href = '/'
+      setVerifyBanner(option)
     } else if (option === 2) {
+      Swal.fire({
+        title: 'Material',
+        text: 'Em breve',
+        icon: 'info',
+        confirmButtonText: 'Ok'
+      })
+    } else if (option === 4) {
+      setVerifyBanner(option)
     }
   }
 
@@ -80,7 +91,8 @@ function SideMenu() {
         </div>
       </div>
     </div>
-      <BannerMain />
+      {verifyBanner === 1 && <BannerMain />}
+      {verifyBanner === 4 && <BannerContent />}
     </>
   )
 }

@@ -16,6 +16,7 @@ export const changeTheme = (theme) => {
             '--base-color3': '#095e80',
             '--button-theme1': '#589afd',
             '--button-theme2': '#065dd8',
+            '--code-color': '#282C34',
             '--white': '#fff',
             '--black': '#000'
         }
@@ -32,6 +33,7 @@ export const changeTheme = (theme) => {
             '--base-color3': '#9e6f53',
             '--button-theme1': '#fd5858',
             '--button-theme2': '#fa2c2c',
+            '--code-color': '#282C34',
             '--white': '#000',
             '--black': '#fff'
         }
