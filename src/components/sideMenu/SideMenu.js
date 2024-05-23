@@ -33,9 +33,9 @@ function SideMenu() {
     setOption(option)
     if (option === 1) {
       setVerifyBanner(option)
-    } else if (option === 2) {
+    } else if (option === 4) {
       Swal.fire({
-        title: 'Material',
+        title: 'Formulário',
         text: 'Em breve',
         icon: 'info',
         confirmButtonText: 'Ok'
@@ -92,7 +92,7 @@ function SideMenu() {
       </div>
     </div>
       {verifyBanner === 1 && <BannerMain />}
-      {verifyBanner === 4 && <BannerContent />}
+      {verifyBanner === 2 && <BannerContent />}
     </>
   )
 }
