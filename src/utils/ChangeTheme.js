@@ -3,20 +3,7 @@ export const changeTheme = (theme) => {
 
     let myVariables;
 
-    if (theme === 'dark') {
-        myVariables = {
-            '--primary-color': '#223150',
-            '--secondary-color': '#2F4B79',
-            '--tertiary-color': '#4A668E',
-            '--quaternary-color': '#C92337',
-            '--quinary-color': '#D9A64A',
-            '--senary-color': '#E16237',
-            '--base-color1': '#1F1F1F',
-            '--base-color2': '#1A1A1A',
-            '--white': '#000',
-            '--black': '#fff'
-        }
-    } else {
+    if (theme === 'light') {
         myVariables = {
             '--primary-color': '#D9A64A',
             '--secondary-color': '#E16237',
@@ -28,6 +15,19 @@ export const changeTheme = (theme) => {
             '--base-color2': '#ffffff',
             '--white': '#fff',
             '--black': '#000'
+        }
+    } else {
+        myVariables = {
+            '--primary-color': '#223150',
+            '--secondary-color': '#2F4B79',
+            '--tertiary-color': '#4A668E',
+            '--quaternary-color': '#C92337',
+            '--quinary-color': '#D9A64A',
+            '--senary-color': '#E16237',
+            '--base-color1': '#1F1F1F',
+            '--base-color2': '#1A1A1A',
+            '--white': '#000',
+            '--black': '#fff'
         }
     }
 
