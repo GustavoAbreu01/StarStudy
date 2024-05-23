@@ -35,12 +35,12 @@ function SideMenu() {
       setVerifyBanner(option)
     } else if (option === 4) {
       Swal.fire({
-        title: 'Formulário',
+        title: 'Formulário  ',
         text: 'Em breve',
         icon: 'info',
         confirmButtonText: 'Ok'
       })
-    } else if (option === 4) {
+    } else if (option === 2) {
       setVerifyBanner(option)
     }
   }
