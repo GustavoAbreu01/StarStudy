@@ -1,0 +1,29 @@
+.horizontal-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-top: 3vh;
+    width: 50vw;
+}
+
+.tags__search {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 25px;
+    text-align: center;
+    justify-content: center;
+    min-width: 2rem;
+    max-width: 18vw;
+    border-radius: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    height: 2rem;
+    padding-bottom: 1rem;
+}
+
+.tags__search>span {
+    font-size: 12px;
+}

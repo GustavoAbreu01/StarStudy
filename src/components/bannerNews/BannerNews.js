@@ -9,7 +9,7 @@ function BannerNews() {
 
   const getWeather = async () => {
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=Joinville&units=metric&appid=fac10a74a804d851c82efe78bb6fa468&lang=pt_br`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=Jaragua&units=metric&appid=fac10a74a804d851c82efe78bb6fa468&lang=pt_br`;
       const response = await fetch(url);
       const data = await response.json();
       localStorage.setItem('weather', JSON.stringify(data));
@@ -46,6 +46,12 @@ function BannerNews() {
 
   const isDaytime = hour >= 6 && hour < 18;
 
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const capitalizedDescription = capitalizeFirstLetter(description);
+
   return (
     <div className='container_banner_news'>
       <div className='box_temp'>
@@ -56,19 +62,28 @@ function BannerNews() {
         {!isDaytime && description === 'céu limpo' && <FaMoon />}
         {isDaytime && description === 'algumas nuvens' && <FaCloudSun />}
         {!isDaytime && description === 'algumas nuvens' && <FaCloudMoon />}
+        {description === 'nublado' && <FaCloud />}
         {description === 'nuvens dispersas' && <FaCloud />}
         {description === 'chuva leve' && <FaCloudRain />}
         {description === 'chuva moderada' && <FaCloudShowersHeavy />}
         {description === 'trovoada' && <FaCloudBolt />}
       </div>
       <div className='box_details'>
-        <p>Clima: {description}</p>
-        <p>Sensação Térmica: {Math.floor(feels_like)}°C</p>
-        <p>Temperatura Mínima: {Math.floor(temp_min)}°C</p>
-        <p>Temperatura Máxima: {Math.floor(temp_max)}°C</p>
-        <p>Umidade: {humidity}%</p>
-        <p>Vento: {speed} m/s, Direção: {deg}°</p>
-        <p>Nuvens: {cloudiness}%</p>
+        <div>
+          <p className='description_text'>Jaraguá</p>
+          <p className='description_text_sub'>{capitalizedDescription}</p>
+          <div className='max_min_box'>
+            <p className='max_min_text'>Min: {Math.floor(temp_min)}°C</p>
+            <p className='max_min_text'>Max: {Math.floor(temp_max)}°C</p>
+          </div>
+          <p className='text_info_weather'>Sensação Térmica: {Math.floor(feels_like)}°C</p>
+          <p className='text_info_weather'>Umidade: {humidity}%</p>
+          <div className='box_text_weather'>
+            <p className='text_info'>Vento: {speed} m/s, Direção: {deg}°</p>
+            <p className='text_info'>Nuvens: {cloudiness}%</p>
+          </div>
+        </div>
+
       </div>
     </div>
   );

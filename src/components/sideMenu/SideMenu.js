@@ -11,6 +11,9 @@ import { getUser } from '../../utils/ChangeUser';
 import logoDark from '../../assets/img/LogoDark.png'
 import logoLight from '../../assets/img/LogoLight.png'
 
+import Swal from 'sweetalert2'
+import BannerMain from '../bannerMain/BannerMain';
+
 function SideMenu() {
   const ref = React.useRef(null)
   const config = getUser()
@@ -25,12 +28,16 @@ function SideMenu() {
 
   const alternateOption = (option) => () => {
     setOption(option)
+    if (option === 1) {
+      window.location.href = '/'
+    } else if (option === 2) {
+    }
   }
 
   const reloadPage = () => {
     setTimeout(() => {
-    window.location.reload()
-    } , 200)
+      window.location.reload()
+    }, 200)
   }
 
   const changeLocalTheme = () => {
@@ -43,8 +50,8 @@ function SideMenu() {
       ref.current.checked = true;
     }
     setInterval(() => {
-    changeTheme(currentTheme)
-    } , 1000)
+      changeTheme(currentTheme)
+    }, 1000)
   }
 
   useEffect(() => {
@@ -52,12 +59,11 @@ function SideMenu() {
   }, [])
 
   return (
-    <div className='container_sidemenu'>
+    <><div className='container_sidemenu'>
       <div className='box_options'>
         <img src={imageTheme} className='logo_menu' />
         <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option === 1 ? 'active' : ''}`} />
         <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option === 2 ? 'active' : ''}`} />
-        <RiQuestionFill onClick={alternateOption(3)} className={`icon_menu ${option === 3 ? 'active' : ''}`} />
         <RiChat3Fill onClick={alternateOption(4)} className={`icon_menu ${option === 4 ? 'active' : ''}`} />
       </div>
       <div className='box_user'>
@@ -67,13 +73,15 @@ function SideMenu() {
           <p className='pc_number'>{user.pc}</p>
         </div>
         <div className='menu_divider'></div>
-        <div onClick={() => { changeLocalTheme() }} className="input_wrapper">
+        <div onClick={() => { changeLocalTheme(); }} className="input_wrapper">
           <input onClick={reloadPage} type="checkbox" className="switch_4" ref={ref} />
-          <TbHazeMoon onClick={() => { changeLocalTheme() }} className='is_checked' />
-          <TbSunset2 onClick={() => { changeLocalTheme() }} className='is_unchecked' />
+          <TbHazeMoon onClick={() => { changeLocalTheme(); }} className='is_checked' />
+          <TbSunset2 onClick={() => { changeLocalTheme(); }} className='is_unchecked' />
         </div>
       </div>
     </div>
+      <BannerMain />
+    </>
   )
 }
 

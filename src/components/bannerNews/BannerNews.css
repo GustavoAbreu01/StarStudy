@@ -35,4 +35,90 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1vh solid var(--base-color2);
+}
+
+.description_text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 2.5vh;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.description_text_sub {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10vh;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.max_min_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17.5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.max_min_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7vw;
+    height: 4vh;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--quaternary-color);
+    border-radius: 10vh;
+    box-shadow: 0 0 0.5vh 0.2vh rgba(0, 0, 0, 0.2);
+}
+
+.text_info_weather {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1vw;
+    width: 16.5vw;
+    height: 5vh;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.text_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1vw;
+    padding-left: 1vw;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.box_text_weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 14vw;
+    height: 7vh;
+    gap: 0.5vh;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--black);
+    background-color: var(--base-color1);
+    border-radius: 3vh 3vh 10vh 3vh;
+    border: 0.5vh solid var(--base-color2);
 }

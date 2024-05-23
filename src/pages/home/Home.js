@@ -30,7 +30,6 @@ function Home() {
         <Loading />
       </div>
       <SideMenu />
-      <BannerMain />
       <BannerNews />
       <img src={imageTheme} className='image_detail'>
       </img>

@@ -13,6 +13,9 @@ export const changeTheme = (theme) => {
             '--senary-color': '#223150',
             '--base-color1': '#eeeeee',
             '--base-color2': '#ffffff',
+            '--base-color3': '#095e80',
+            '--button-theme1': '#589afd',
+            '--button-theme2': '#065dd8',
             '--white': '#fff',
             '--black': '#000'
         }
@@ -26,6 +29,9 @@ export const changeTheme = (theme) => {
             '--senary-color': '#E16237',
             '--base-color1': '#1F1F1F',
             '--base-color2': '#1A1A1A',
+            '--base-color3': '#9e6f53',
+            '--button-theme1': '#fd5858',
+            '--button-theme2': '#fa2c2c',
             '--white': '#000',
             '--black': '#fff'
         }
