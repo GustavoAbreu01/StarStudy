@@ -80,13 +80,7 @@ function SideMenu() {
       setVerifyBanner(option)
     }
   }
-
-  const reloadPage = () => {
-    setTimeout(() => {
-      window.location.reload()
-    }, 200)
-  }
-
+  
   const changeLocalTheme = () => {
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'light') {
@@ -96,9 +90,8 @@ function SideMenu() {
       localStorage.setItem('theme', 'light');
       ref.current.checked = true;
     }
-    setInterval(() => {
-      changeTheme(currentTheme)
-    }, 1000)
+    
+    changeTheme(currentTheme)
   }
 
   useEffect(() => {
@@ -121,7 +114,7 @@ function SideMenu() {
         </div>
         <div className='menu_divider'></div>
         <div onClick={() => { changeLocalTheme(); }} className="input_wrapper">
-          <input onClick={reloadPage} type="checkbox" className="switch_4" ref={ref} />
+          <input type="checkbox" className="switch_4" ref={ref} />
           <TbHazeMoon onClick={() => { changeLocalTheme(); }} className='is_checked' />
           <TbSunset2 onClick={() => { changeLocalTheme(); }} className='is_unchecked' />
         </div>
