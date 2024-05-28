@@ -183,3 +183,7 @@
     height: 3vw;
     border-radius: 50%;
 }
+
+.swal2-title {
+    color: var(--black) !important;
+  }
