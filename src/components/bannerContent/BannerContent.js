@@ -1,15 +1,9 @@
 import React from 'react'
 import './BannerContent.css'
 
-import BannerMainD from '../../assets/img/BannerMainDark.png'
 import BannerMainL from '../../assets/img/BannerMainLight.png'
-import ThemesBanners from '../themesBanners/ThemesBanners'
-
 
 function BannerContent() {
-
-  const verifyTheme = localStorage.getItem('theme')
-  const imageTheme = verifyTheme === 'dark' ? BannerMainL : BannerMainD
   return (
     <>
       <div className='container_banner_content'>
@@ -35,7 +29,7 @@ function BannerContent() {
           <p className='title_main'>Teste de códigos</p>
           <input type='text' className='input_code' placeholder='Digite o código acima' />
         </div>
-        <img src={imageTheme} className='banner_main_image' />
+        <img src={BannerMainL} className='banner_main_image' id='imgCenterContent'/>
 
       </div>
     </>
