@@ -1,14 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './BannerMain.css'
 
-import BannerMainD from '../../assets/img/BannerMainDark.png'
 import BannerMainL from '../../assets/img/BannerMainLight.png'
 import ThemesBanners from '../themesBanners/ThemesBanners'
 
 function BannerMain() {
-
-  const verifyTheme = localStorage.getItem('theme')
-  const imageTheme = verifyTheme === 'dark' ? BannerMainL : BannerMainD
   return (
     <>
       <div className='container_banner_main'>
@@ -18,8 +14,7 @@ function BannerMain() {
           <ThemesBanners />
           <button class="button_main" role="button">Ir para o Material</button>
         </div>
-        <img src={imageTheme} className='banner_main_image' />
-
+        <img className='banner_main_image' id="imgCenterMain" src={BannerMainL}/>
       </div>
     </>
   )

@@ -42,4 +42,25 @@ export const changeTheme = (theme) => {
     for (const key in myVariables) {
         root.style.setProperty(key, myVariables[key]);
     }
+
+    const image1 = document.querySelector('#imgRightBottom');
+    const image2 = document.querySelector('#imgCenterMain');
+    const image3 = document.querySelector('#imgCenterContent');
+    const image4 = document.querySelector('#imgTopLeft');
+
+    if (image1) {
+        image1.src = theme === 'light' ? 'https://i.imgur.com/L43su7Y.png' : 'https://i.imgur.com/YbiBWkI.png';
+    }
+
+    if (image2) {
+        image2.src = theme === 'light' ? 'https://i.imgur.com/WsjWylZ.png' : 'https://i.imgur.com/esastI6.png';
+    }
+
+    if (image3) {
+        image3.src = theme === 'light' ? 'https://i.imgur.com/WsjWylZ.png' : 'https://i.imgur.com/esastI6.png';
+    }
+
+    if (image4) {
+        image4.src = theme === 'light' ? 'https://i.imgur.com/FSFIb6p.png' : 'https://i.imgur.com/UZWHHGp.png';
+    }
 }
