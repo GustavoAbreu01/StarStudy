@@ -6,7 +6,13 @@ import MenuContent from './menucontent/MenuContent'
 import { useParams } from 'react-router-dom';
 
 import { LuBrainCircuit } from "react-icons/lu";
+import { IoMdDocument } from "react-icons/io";
+import { FaSquareRootVariable } from "react-icons/fa6";
+import { IoIosGitBranch } from "react-icons/io";
 
+import componetsArduino from '../../assets/img/Kit-de-piezas-universales-electr-nicas-placa-de-pruebas-potenci-metro-de-resistencia-de-Cable-LED.webp'
+import robotica from '../../assets/img/Fig2.png'
+import arduino from '../../assets/img/arduino-2168193_960_720.webp'
 
 function BannerContent() {
 
@@ -55,6 +61,7 @@ function BannerContent() {
         return <div className='box_content_banner_info'>
           <p className='title_main'>Declaração de variáveis</p>
           <p className='desc_main'>Temos várias formas de armazenar uma variável dependendo de seu formato, se for um número inteiro utilizamos o <span className='high_text'>"int"</span> e se for um texto utilizamos o <span className='high_text'>"char"</span> se for apenas um caractére é o <span className='high_text'>"char"</span> normal se for mais de um caractére seria o <span className='high_text'>"char nomeDaVariavel['número de caractéres']"</span> e se for um número decimal seria o <span className='high_text'>"float"</span> isso seguido pelo nome da variável, exemplos:</p>
+          <FaSquareRootVariable className='icon_content_1' />
           <div className='box_code'>
             <code>
               <p>int numero = 1;</p>
@@ -69,6 +76,7 @@ function BannerContent() {
         return <div className='box_content_banner_info'>
           <p className='title_main'>Comandos de Entrada e Saída</p>
           <p className='desc_main'>Agora para mostrarmos algo ou o valor de uma variável para o usuário temos o <span className='high_text'>printf()</span> e para recebermos e guardarmos um valor dentro de uma variável temos o <span className='high_text'>scanf()</span>;</p>
+          <IoMdDocument className='icon_content_1' />
           <div className='box_code'>
             <code>
               <p>// Para mostrar algum texto:</p>
@@ -92,7 +100,7 @@ function BannerContent() {
               <p>if()</p>
             </code>
           </div>
-          <p className='desc_main'>A estrutura condicional composta, ou <span className='high_text'></span>"if-else", permite que o programa execute um bloco de código se uma condição especificada for verdadeira e outro bloco de código se a condição for falsa.</p>
+          <p className='desc_main'>A estrutura condicional composta, ou <span className='high_text'>"if-else"</span>, permite que o programa execute um bloco de código se uma condição especificada for verdadeira e outro bloco de código se a condição for falsa.</p>
           <div className='box_code'>
             <code>
               <p>{"if()"}</p>
@@ -111,114 +119,74 @@ function BannerContent() {
           <div className='box_code'>
             <code>
               <p>{`for (int i = 0; i < 10; i++) {`}</p>
-              <p>{`fprintf("%d\n", i);`}</p>
-              <p>{`f}`}</p>
-              <p>{`fint x = 0;`}</p>
-              <p>{`fwhile (x < 10) {`}</p>
-              <p>{`f   printf("%d\n", x);`}</p>
-              <p>{`fx++;`}</p>
-              <p>{`f}`}</p>
-              <p>{`f int y = 0;`}</p>
-              <p>{`fdo {`}</p>
-              <p>{`f  printf("%d\n", y);`}</p>
-              <p>{`f y++;`}</p>
-              <p>{`f} while (y < 10);`}</p>
+              <p>{`printf("%d\n", i);`}</p>
+              <p>{`}`}</p>
+              <p>{`int x = 0;`}</p>
+              <p>{`while (x < 10) {`}</p>
+              <p>{`printf("%d\n", x);`}</p>
+              <p>{`x++;`}</p>
+              <p>{`}`}</p>
+              <p>{`int y = 0;`}</p>
+              <p>{`do {`}</p>
+              <p>{`printf("%d\n", y);`}</p>
+              <p>{`y++;`}</p>
+              <p>{`} while (y < 10);`}</p>
             </code>
           </div>
-          <p className='title_main'>Teste de códigos</p>
-          <input type='text' className='input_code' placeholder='Digite o código acima' />
+          <p className='desc_main'>Os laços de repetição mais comuns em  C são for, while e do-while.
+            <span className='high_text'> for:</span> É usado quando o número de iterações é conhecido antecipadamente.
+            <span className='high_text'> while:</span> É usado quando a condição de parada é verificada antes da execução do bloco de código.
+            <span className='high_text'> do-while:</span> É semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez e a condição seja verificada no final.</p>
+          <p className='desc_main'>Permitem executar tarefas repetitivas de forma eficiente. Os diferentes tipos de laços oferecem flexibilidade para escolher a estrutura mais adequada para a situação.
+            É possível criar loops infinitos acidentalmente se a condição de parada não for definida corretamente, o que pode travar o programa e consumir recursos excessivosda máquina.</p>
         </div>;
       case '8':
         return <div className='box_content_banner_info'>
           <p className='title_main'>Conhecendo o Arduino</p>
-          <p className='desc_main'>Os laços de repetição mais comuns em C são for, while e do-while.
-            <span className='high_text'>for:</span> É usado quando o número de iterações é conhecido antecipadamente.
-            <span className='high_text'>while:</span> É usado quando a condição de parada é verificada antes da execução do bloco de código.
-            <span className='high_text'>do-while:</span> É semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez e a condição seja verificada no final.</p>
-          <p className='title_main'>Apresentação de códigos</p>
-          <div className='box_code'>
-            <code>
-              <p>#include &lt;stdio.h&gt;</p>
-              <p>int main() {'{'}</p>
-              <p>int i;</p>
-              <p>for(i = 0; i &lt; 5; i++) {'{'}</p>
-              <p>printf("Hello World\n");</p>
-              <p>{'}'}</p>
-              <p>return 0;</p>
-              <p>{'}'}</p>
-            </code>
+          <p className='desc_main'>O Arduino é uma plataforma de prototipagem eletrônica de código aberto, baseada em hardware e software flexível e fácil de usar.
+            Existem várias placas <span className='high_text'>Arduino, como Arduino Uno, Mega, Nano, etc. </span>
+            Possui uma comunidade ativa e recursos de aprendizado abundantes.
+            Pode ser utilizado em uma ampla gama de projetos, desde simples até complexos.
+            Os componentes são relativamente baratos e amplamente disponíveis.
+          </p>
+          <div className='box_image_arduino'>
+            <img className='arduino_image' src={arduino} />
           </div>
-          <p className='title_main'>Teste de códigos</p>
-          <input type='text' className='input_code' placeholder='Digite o código acima' />
+          <p className='desc_main'>Para projetos mais avançados, pode ser necessário migrar para plataformas mais poderosas.
+            Algumas placas Arduino têm limitações de memória que podem ser um obstáculo em projetos maiores.
+          </p>
         </div>;
       case '9':
         return <div className='box_content_banner_info'>
           <p className='title_main'>Componentes básicos do Arduino</p>
-          <p className='desc_main'>Os laços de repetição mais comuns em C são for, while e do-while.
-            <span className='high_text'>for:</span> É usado quando o número de iterações é conhecido antecipadamente.
-            <span className='high_text'>while:</span> É usado quando a condição de parada é verificada antes da execução do bloco de código.
-            <span className='high_text'>do-while:</span> É semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez e a condição seja verificada no final.</p>
-          <p className='title_main'>Apresentação de códigos</p>
-          <div className='box_code'>
-            <code>
-              <p>#include &lt;stdio.h&gt;</p>
-              <p>int main() {'{'}</p>
-              <p>int i;</p>
-              <p>for(i = 0; i &lt; 5; i++) {'{'}</p>
-              <p>printf("Hello World\n");</p>
-              <p>{'}'}</p>
-              <p>return 0;</p>
-              <p>{'}'}</p>
-            </code>
+          <p className='desc_main'>OOs componentes básicos do Arduino incluem resistores, LEDs, botões, sensores, motores, etc., que são usados para construir circuitos e interagir com o ambiente.
+            Existem vários tipos de componentes básicos, cada um com sua função específica.</p>
+          <div className='box_arduino'>
+            <img className='componets_arduino' src={componetsArduino} />
           </div>
-          <p className='title_main'>Teste de códigos</p>
-          <input type='text' className='input_code' placeholder='Digite o código acima' />
         </div>;
       case '10':
         return <div className='box_content_banner_info'>
-          <p className='title_main'>Simuladores de robótica</p>
-          <p className='desc_main'>Os laços de repetição mais comuns em C são for, while e do-while.
-            <span className='high_text'>for:</span> É usado quando o número de iterações é conhecido antecipadamente.
-            <span className='high_text'>while:</span> É usado quando a condição de parada é verificada antes da execução do bloco de código.
-            <span className='high_text'>do-while:</span> É semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez e a condição seja verificada no final.</p>
-          <p className='title_main'>Apresentação de códigos</p>
-          <div className='box_code'>
-            <code>
-              <p>#include &lt;stdio.h&gt;</p>
-              <p>int main() {'{'}</p>
-              <p>int i;</p>
-              <p>for(i = 0; i &lt; 5; i++) {'{'}</p>
-              <p>printf("Hello World\n");</p>
-              <p>{'}'}</p>
-              <p>return 0;</p>
-              <p>{'}'}</p>
-            </code>
+          <p className='title_main'>Simuladores de Robótica</p>
+          <p className='desc_main'>Os simuladores de robótica são ferramentas que permitem simular o funcionamento de robôs em um ambiente virtual.
+            Elimina a necessidade de hardware real, reduzindo custos.
+            Permite testar e depurar algoritmos sem risco de danificar equipamentos.
+            Possibilita a simulação de diferentes cenários e condições.</p>
+          <div className='box_arduino'>
+            <img className='robotica_image' src={robotica} /> 
           </div>
-          <p className='title_main'>Teste de códigos</p>
-          <input type='text' className='input_code' placeholder='Digite o código acima' />
+          <p className='desc_main'>Nem sempre reproduzem fielmente o comportamento real dos robôs.
+            Alguns simuladores podem ter uma curva de aprendizado íngreme.</p>
         </div>;
       default:
         return <div className='box_content_banner_info'>
           <p className='title_main'>Linguagem de Programação C</p>
-          <p className='desc_main'>Os laços de repetição mais comuns em C são for, while e do-while.
-            <span className='high_text'>for:</span> É usado quando o número de iterações é conhecido antecipadamente.
-            <span className='high_text'>while:</span> É usado quando a condição de parada é verificada antes da execução do bloco de código.
-            <span className='high_text'>do-while:</span> É semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez e a condição seja verificada no final.</p>
-          <p className='title_main'>Apresentação de códigos</p>
-          <div className='box_code'>
-            <code>
-              <p>#include &lt;stdio.h&gt;</p>
-              <p>int main() {'{'}</p>
-              <p>int i;</p>
-              <p>for(i = 0; i &lt; 5; i++) {'{'}</p>
-              <p>printf("Hello World\n");</p>
-              <p>{'}'}</p>
-              <p>return 0;</p>
-              <p>{'}'}</p>
-            </code>
-          </div>
-          <p className='title_main'>Teste de códigos</p>
-          <input type='text' className='input_code' placeholder='Digite o código acima' />
+          <p className='desc_main'>Os simuladores de robótica são ferramentas que permitem simular o funcionamento de robôs em um ambiente virtual.
+            Elimina a necessidade de hardware real, reduzindo custos.
+            Permite testar e depurar algoritmos sem risco de danificar equipamentos.
+            Possibilita a simulação de diferentes cenários e condições.</p>
+          <p className='desc_main'>Nem sempre reproduzem fielmente o comportamento real dos robôs.
+            Alguns simuladores podem ter uma curva de aprendizado íngreme.</p>
         </div>;
     }
   };

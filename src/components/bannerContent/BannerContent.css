@@ -153,3 +153,65 @@
     height: 9vh;
     color: var(--tertiary-color);
 }
+
+.icon_content_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    background-color: var(--base-color1);
+    border-radius: 1vh;
+    margin-top: 2vh;
+    padding: 1vh;
+    font-size: 9vh;
+    color: var(--tertiary-color);
+}
+
+.arduino_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 30vh;
+    margin-top: 2vh;
+}
+
+.box_image_arduino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    height: 35vh;
+    margin-top: 2vh;
+}
+
+.componets_arduino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:  35vw;
+    height: 30vh;
+    margin-top: 2vh;
+    border-radius: 20px;
+    box-shadow: 0 0 0.5vh 0.2vh rgba(0, 0, 0, 0.2);
+}
+
+.box_arduino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    height: 35vh;
+    margin-top: 2vh;
+}
+
+.robotica_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 0.5vh 0.2vh rgba(0, 0, 0, 0.2);
+    width: 25vw;
+    height: 30vh;
+    margin-top: 2vh;
+}
