@@ -92,13 +92,13 @@ function BannerContent() {
               <p>if()</p>
             </code>
           </div>
-          <p className='desc_main'>A estrutura condicional composta, ou <span className='high_text'>"if-else"</span>, permite que o programa execute um bloco de código se uma condição especificada for verdadeira e outro bloco de código se a condição for falsa.</p>
+          <p className='desc_main'>A estrutura condicional composta, ou <span className='high_text'></span>"if-else", permite que o programa execute um bloco de código se uma condição especificada for verdadeira e outro bloco de código se a condição for falsa.</p>
           <div className='box_code'>
             <code>
               <p>{"if()"}</p>
-              <br/>
+              <br />
               <p>{"else{"}</p>
-              <br/>
+              <br />
               <p>{"})"}</p>
             </code>
           </div>
@@ -106,21 +106,23 @@ function BannerContent() {
       case '7':
         return <div className='box_content_banner_info'>
           <p className='title_main'>Laços de Repetição</p>
-          <p className='desc_main'>Os laços de repetição mais comuns em C são for, while e do-while.
-            <span className='high_text'>for:</span> É usado quando o número de iterações é conhecido antecipadamente.
-            <span className='high_text'>while:</span> É usado quando a condição de parada é verificada antes da execução do bloco de código.
-            <span className='high_text'>do-while:</span> É semelhante ao while, mas garante que o bloco de código seja executado pelo menos uma vez e a condição seja verificada no final.</p>
+          <p className='desc_main'>Laços de repetição em C permitem executar um bloco de código várias vezes.</p>
           <p className='title_main'>Apresentação de códigos</p>
           <div className='box_code'>
             <code>
-              <p>#include &lt;stdio.h&gt;</p>
-              <p>int main() {'{'}</p>
-              <p>int i;</p>
-              <p>for(i = 0; i &lt; 5; i++) {'{'}</p>
-              <p>printf("Hello World\n");</p>
-              <p>{'}'}</p>
-              <p>return 0;</p>
-              <p>{'}'}</p>
+              <p>{`for (int i = 0; i < 10; i++) {`}</p>
+              <p>{`fprintf("%d\n", i);`}</p>
+              <p>{`f}`}</p>
+              <p>{`fint x = 0;`}</p>
+              <p>{`fwhile (x < 10) {`}</p>
+              <p>{`f   printf("%d\n", x);`}</p>
+              <p>{`fx++;`}</p>
+              <p>{`f}`}</p>
+              <p>{`f int y = 0;`}</p>
+              <p>{`fdo {`}</p>
+              <p>{`f  printf("%d\n", y);`}</p>
+              <p>{`f y++;`}</p>
+              <p>{`f} while (y < 10);`}</p>
             </code>
           </div>
           <p className='title_main'>Teste de códigos</p>
