@@ -8,6 +8,7 @@ import { changeTheme } from "./utils/ChangeTheme";
 import Content from "./pages/content/Content";
 import SideMenu from "./components/sideMenu/SideMenu";
 import Loading from "./pages/loading/Loading";
+import Names from "./pages/names/Names";
 
 // https://home.openweathermap.org/api_keys
 
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/content/:id" element={<Content />} />
+          <Route path="/name" element={<Names />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
