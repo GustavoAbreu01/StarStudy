@@ -54,7 +54,7 @@
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--base-color3);
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 
 .button_main {
@@ -139,4 +139,17 @@
     background-color: var(--quaternary-color);
     border-radius: 10px;
     border: none;
+}
+
+.icon_content_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    background-color: var(--base-color1);
+    border-radius: 1vh;
+    margin-top: 2vh;
+    padding: 1vh;
+    height: 9vh;
+    color: var(--tertiary-color);
 }

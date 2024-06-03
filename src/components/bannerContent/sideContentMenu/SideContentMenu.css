@@ -18,7 +18,7 @@
     justify-content: start;
     align-items: self-start;
     height: 5vh;
-    gap: 4vh;
+    gap: 3vh;
 }
 
 .title_menu_content {
@@ -70,7 +70,7 @@
     position: absolute;
     padding: 1vh 0vh 0vh 2vh;
     margin-top: 10vh;
-    height: 25vh;
+    height: 21vh;
     z-index: 999;
 }
 
