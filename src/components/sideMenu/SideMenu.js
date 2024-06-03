@@ -96,7 +96,7 @@ function SideMenu() {
   }, [])
 
   useEffect(() => {
-    if (window.location.pathname === '/content') {
+    if (window.location.pathname === '/content/1') {
       setOption(2)
     } else {
       setOption(1)
@@ -108,7 +108,7 @@ function SideMenu() {
       <div className='box_options'>
         <img src={logoLight} className='logo_menu' id='imgTopLeft' />
         <Link to="/"> <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option === 1 ? 'active' : ''}`} /> </Link>
-        <Link to="/content"> <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option === 2 ? 'active' : ''}`} /> </Link>
+        <Link to="/content/1"> <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option === 2 ? 'active' : ''}`} /> </Link>
         <RiChat3Fill onClick={alternateOption(4)} className={`icon_menu ${option === 4 ? 'active' : ''}`} />
       </div>
       <div className='box_user'>

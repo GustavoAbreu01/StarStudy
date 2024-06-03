@@ -35,6 +35,7 @@
     color: var(--black);
     border-radius: 1vh;
     position: fixed;
+    padding-right: 1vw;
     top: 15vh;
     left: 18vw;
     width: 56vw;
@@ -95,6 +96,8 @@
     display: flex;
     justify-content: flex-start;
     padding-left: 2.5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     align-items: center;
     width: 95%;
     height: 100%;
@@ -122,4 +125,18 @@
     border: none;
     box-shadow: 0 0 0.5vh 0.2vh rgba(0, 0, 0, 0.2);
     margin-bottom: 100px;
+}
+
+.box_content_banner_info::-webkit-scrollbar {
+    width: 3px;
+}
+
+.box_content_banner_info::-webkit-scrollbar-track {
+    background: var(--base-color2);
+}
+
+.box_content_banner_info::-webkit-scrollbar-thumb {
+    background-color: var(--quaternary-color);
+    border-radius: 10px;
+    border: none;
 }

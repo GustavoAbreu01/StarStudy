@@ -4,7 +4,6 @@ import SideMenu from '../../components/sideMenu/SideMenu'
 import BannerNews from '../../components/bannerNews/BannerNews'
 
 import light from '../../assets/img/Ativo 3.png'
-import Loading from '../loading/Loading'
 import BannerMain from '../../components/bannerMain/BannerMain'
 
 function Home() {

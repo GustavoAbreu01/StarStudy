@@ -17,8 +17,8 @@
     flex-direction: column;
     justify-content: start;
     align-items: self-start;
+    height: 5vh;
     gap: 4vh;
-    margin-top: 5vh;
 }
 
 .title_menu_content {
@@ -39,6 +39,8 @@
     color: var(--black);
     cursor: pointer;
     transition: 0.2s;
+    z-index: 999;
+    text-decoration: none;
 }
 
 .option_menu_content:hover {
@@ -48,4 +50,61 @@
 
 .option_menu_content_icon {
     color: var(--quaternary-color);
+}
+
+.container_banner_news_content {
+    display: flex;
+    flex-direction: column;
+    width: 17.5vw;
+    height: 53vh;
+    background-color: var(--base-color2);
+    position: fixed;
+    right: 2.6vw;
+    top: 4.5vh;
+    border-radius: 10vh 10vh 45% 10vh;
+}
+
+.box_details_content {
+    overflow: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    padding: 1vh 0vh 0vh 2vh;
+    margin-top: 10vh;
+    height: 25vh;
+    z-index: 999;
+}
+
+.title_menu_content {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-right: 5vw;
+    right: 0;
+    border-bottom: 3px solid var(--quaternary-color);
+    position: fixed;
+}
+
+.box_details_content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.box_details_content::-webkit-scrollbar-track {
+    background: var(--base-color2);
+}
+
+.box_details_content::-webkit-scrollbar-thumb {
+    background-color: var(--quaternary-color);
+    border-radius: 10px;
+    border: none;
+}
+
+.icon_cup {
+    color: var(--quaternary-color);
+    background-color: var(--base-color2);
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    font-size: 4vw;
+    bottom: 7vh;
+    left: 6.5vw
 }

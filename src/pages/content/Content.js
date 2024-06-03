@@ -4,6 +4,7 @@ import SideMenu from '../../components/sideMenu/SideMenu'
 import Loading from '../loading/Loading'
 import light from '../../assets/img/Ativo 3.png'
 import BannerContent from '../../components/bannerContent/BannerContent'
+import SideContentMenu from '../../components/bannerContent/sideContentMenu/SideContentMenu'
 
 function Content() {
 
@@ -21,7 +22,7 @@ function Content() {
   return (
     <div className='container_home'>
     <BannerContent />
-    <BannerNews />
+    <SideContentMenu />
     <img className='image_detail' id='imgRightBottom' src={light}>
     </img>
   </div>

@@ -36,7 +36,7 @@ function App() {
       <SideMenu />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/content" element={<Content />} />
+          <Route path="/content/:id" element={<Content />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
