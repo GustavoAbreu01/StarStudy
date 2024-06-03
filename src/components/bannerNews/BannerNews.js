@@ -9,7 +9,7 @@ function BannerNews() {
 
   const getWeather = async () => {
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=Jaragua&units=metric&appid=fac10a74a804d851c82efe78bb6fa468&lang=pt_br`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=Joinville&units=metric&appid=fac10a74a804d851c82efe78bb6fa468&lang=pt_br`;
       const response = await fetch(url);
       const data = await response.json();
       localStorage.setItem('weather', JSON.stringify(data));
