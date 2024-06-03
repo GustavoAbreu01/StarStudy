@@ -18,12 +18,12 @@ const ThemesBanners = () => {
     };
 
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
-        slidesToShow: 2.7,
-        slidesToScroll: 2.7,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        speed: 5000,
+        autoplay: true,
         className: 'horizontal-carousel',
     };
 

@@ -5,26 +5,13 @@ import BannerNews from '../../components/bannerNews/BannerNews'
 
 import light from '../../assets/img/Ativo 3.png'
 import Loading from '../loading/Loading'
+import BannerMain from '../../components/bannerMain/BannerMain'
 
 function Home() {
 
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const loadingTimeout = setTimeout(() => {
-        setIsLoading(false);
-    }, 2000);
-    return () => {
-        clearTimeout(loadingTimeout);
-    };
-}, []);
-
   return (
     <div className='container_home'>
-      <div className={`loading_page ${isLoading ? 'visible' : 'hidden'}`}>
-        <Loading />
-      </div>
-      <SideMenu />
+      <BannerMain />
       <BannerNews />
       <img className='image_detail' id='imgRightBottom' src={light}>
       </img>

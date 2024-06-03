@@ -13,6 +13,7 @@ import logoLight from '../../assets/img/LogoLight.png'
 import Swal from 'sweetalert2'
 import BannerMain from '../bannerMain/BannerMain';
 import BannerContent from '../bannerContent/BannerContent';
+import { Link, Navigate } from 'react-router-dom';
 
 function SideMenu() {
   const ref = React.useRef(null)
@@ -76,7 +77,7 @@ function SideMenu() {
       setVerifyBanner(option)
     }
   }
-  
+
   const changeLocalTheme = () => {
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'light') {
@@ -86,7 +87,7 @@ function SideMenu() {
       localStorage.setItem('theme', 'light');
       ref.current.checked = true;
     }
-    
+
     changeTheme(currentTheme)
   }
 
@@ -94,12 +95,20 @@ function SideMenu() {
     changeLocalTheme()
   }, [])
 
+  useEffect(() => {
+    if (window.location.pathname === '/content') {
+      setOption(2)
+    } else {
+      setOption(1)
+    }
+  } , [])
+
   return (
     <><div className='container_sidemenu'>
       <div className='box_options'>
-        <img src={logoLight} className='logo_menu' id='imgTopLeft'/>
-        <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option === 1 ? 'active' : ''}`} />
-        <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option === 2 ? 'active' : ''}`} />
+        <img src={logoLight} className='logo_menu' id='imgTopLeft' />
+        <Link to="/"> <RiHome3Fill onClick={alternateOption(1)} className={`icon_menu ${option === 1 ? 'active' : ''}`} /> </Link>
+        <Link to="/content"> <RiBook2Fill onClick={alternateOption(2)} className={`icon_menu ${option === 2 ? 'active' : ''}`} /> </Link>
         <RiChat3Fill onClick={alternateOption(4)} className={`icon_menu ${option === 4 ? 'active' : ''}`} />
       </div>
       <div className='box_user'>
@@ -116,8 +125,6 @@ function SideMenu() {
         </div>
       </div>
     </div>
-      {verifyBanner === 1 && <BannerMain />}
-      {verifyBanner === 2 && <BannerContent />}
     </>
   )
 }

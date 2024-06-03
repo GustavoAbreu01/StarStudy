@@ -1,0 +1,25 @@
+.container_menu_content {
+    position: absolute;
+}
+
+.icon_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5vh;
+    width: 9vw;
+    color: var(--black);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.box_menu_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65vw;
+    margin-right: 20vw;
+    margin-left: 12vw;
+    height: 15vh;
+    border-radius: 10vh;
+}
